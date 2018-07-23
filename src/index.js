@@ -1,8 +1,7 @@
 'use strict';
 const nightmare = require('nightmare')();
 module.exports = function (app) {
-    app.get(`/olxPhone`, (req, res) => {
-
+    app.get(`/olxPhone`, (req, res) => 
         nightmare
             .goto(req._parsedUrl.query)
             .wait(100)
@@ -22,7 +21,7 @@ module.exports = function (app) {
                 console.log('0');
                 
                 res.send(err);
-            });          
-                                                 
+            });                                                        
+
     });
 };
